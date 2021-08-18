@@ -15,9 +15,3 @@ export const deleteList=(idList)=> (dispatch) => {
     .then(res=>dispatch(getlists()))
     .catch(err=>console.log(err))
 }
-
-export const editList=(idList,updateList)=> (dispatch) => {
-    axios.put(`/api/list/edit/${idList}`,updateList)
-    .then(res=>dispatch(getlists()))
-    .catch(err=>console.log(err))
-}
