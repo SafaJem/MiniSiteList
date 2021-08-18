@@ -34,15 +34,4 @@ router.delete('/delete/:id',async(req,res)=>{
 
 })
 
-router.put("/edit/:_id", async (req, res) => {
-    const { _id } = req.params;
-    try {
-      const list = await List.findOneAndUpdate({ _id }, { $set: req.body },{new:true});
-      res.json({ msg: "list edited", list });
-    } catch (error) {
-      console.log(error);
-    }
-  });
-
-
 module.exports=router
